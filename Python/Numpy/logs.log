@@ -1,0 +1,58 @@
+2026-03-11 16:53:56,815 | INFO | numpy_assignment.py:28 | Start the pipeline
+2026-03-11 16:53:56,819 | INFO | numpy_assignment.py:34 | The number of records in the file are:100 and the schema details are as follow: Employee_ID       int64
+Name                str
+Age             float64
+Department          str
+Salary          float64
+Joining_Date        str
+Resigned           bool
+dtype: object 
+2026-03-11 16:53:56,820 | INFO | numpy_assignment.py:39 | Missing Values across the following columns are:Employee_ID      0
+Name             0
+Age             16
+Department       0
+Salary           8
+Joining_Date     0
+Resigned         0
+dtype: int64
+2026-03-11 16:53:56,822 | INFO | numpy_assignment.py:45 | The missing value in age were replaced with the median of: 45.5
+2026-03-11 16:53:56,823 | INFO | numpy_assignment.py:50 | The missing value in Salary were replaced with the mean of: 59643.92391304348
+2026-03-11 16:53:56,824 | INFO | numpy_assignment.py:59 | Removed 0 duplicate records based on Employee_ID
+2026-03-11 16:53:56,825 | INFO | numpy_assignment.py:65 | Columns renamed from ['Employee_ID', 'Name', 'Age', 'Department', 'Salary', 'Joining_Date', 'Resigned'] to ['employee_id', 'name', 'age', 'department', 'salary', 'joining_date', 'resigned']
+2026-03-11 16:53:56,826 | INFO | numpy_assignment.py:70 | Converted 'age' column to integer type
+2026-03-11 16:53:56,827 | INFO | numpy_assignment.py:73 | Converted 'salary' column to float type
+2026-03-11 16:53:56,828 | INFO | numpy_assignment.py:76 | Converted 'employee_id' column to string type
+2026-03-11 16:53:56,830 | INFO | numpy_assignment.py:79 | Converted 'joining_date' column to date type
+2026-03-11 16:53:56,830 | INFO | numpy_assignment.py:81 | Final dataset shape: (100, 7)
+2026-03-11 16:53:56,833 | INFO | numpy_assignment.py:82 | Final missing values check: employee_id     0
+name            0
+age             0
+department      0
+salary          0
+joining_date    0
+resigned        0
+dtype: int64
+2026-03-11 16:53:56,835 | INFO | numpy_assignment.py:83 | Final data type checking:employee_id                str
+name                       str
+age                      int64
+department                 str
+salary                 float64
+joining_date    datetime64[us]
+resigned                  bool
+dtype: object
+2026-03-11 16:53:56,836 | INFO | numpy_assignment.py:91 | Number of records before filtering: 100
+2026-03-11 16:53:56,838 | INFO | numpy_assignment.py:104 | Created column 'yearsincompany'
+2026-03-11 16:53:56,838 | INFO | numpy_assignment.py:108 | Number of records after filtering: 100
+2026-03-11 16:53:56,838 | INFO | numpy_assignment.py:109 | Number of records removed during filtering: 0
+2026-03-11 16:53:56,850 | INFO | numpy_assignment.py:122 | Department level statistics:
+              avg_salary  median_age
+department                          
+Finance     58612.570938        45.0
+HR          60466.443028        45.0
+IT          57740.778872        46.5
+Marketing   62476.088587        45.0
+2026-03-11 16:53:56,852 | INFO | numpy_assignment.py:134 | Applied 10% salary increment to department: Finance
+2026-03-11 16:53:56,852 | INFO | numpy_assignment.py:135 | Employees affected: 19
+2026-03-11 16:53:56,853 | INFO | numpy_assignment.py:145 | Data sorted by joining_date in descending order
+2026-03-11 16:53:56,854 | INFO | numpy_assignment.py:156 | Final dataset exported successfully to employees_final.json
+2026-03-11 16:53:56,855 | INFO | numpy_assignment.py:157 | Total records exported: 100
